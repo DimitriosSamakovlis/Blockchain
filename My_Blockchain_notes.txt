@@ -1,0 +1,16 @@
+My implementation of a simple blockchain in Python consists of 2 classes and their methods:
+
+1. Block class (nonce, timestamp, data,previous_hash, own_hash):
+	-hashing : SHA256 hashing of all fields
+	-mine : iterative search for nonce so that hash starts with '00' hexadecimal
+	-verify: checks validity of fields
+
+2. Chain class (list of blocks):
+	-Genesis
+	-add_block (after mining it)
+	-verify: (check validity of chain - timestamps, hashes etc...)
+	-fork: (clone the chain - deep copy)
+	-get_root(chain2) :(returns a clone up to the block of agreement with chain2)
+	
+I also ran a series of examples proving the correctness of the above methods.
+GitHub link: 
