@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head >
+ <title >Voting DApp</title>
+ 
+ <link href='https://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+ <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+ 
+</head>
+<body class="container" style = "text-align: center;background-color: Azure;font-size:170%;font-family:Verdana">
+ <h1 style = "font-size:265%;">Voting Ethereum dApp</h1>
+ <br>
+ <h3> Smart Contract Address: </h3>
+ <p id = "address"> </p>
+ <h3> Your account: </h3>
+ <p id = "account"> </p>
+ <button onclick="App.changeAccount()" class="btn btn-primary">Change Account</button>
+ <br><br>
+ <div class="table-responsive"; >
+  <table class="table table-bordered" style = "background-color: BurlyWood" >
+   <thead>
+    <tr style = "font-size:130%;">
+     <th style = "text-align: center;border: 2px solid black">Candidate</th>
+     <th style = "text-align: center;border: 2px solid black">Votes</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td style = "border: 2px solid black">Rama</td>
+     <td style = "border: 2px solid black" id="candidate-1"></td>
+    </tr>
+    <tr>
+     <td style = "border: 2px solid black">Nick</td>
+     <td style = "border: 2px solid black" id="candidate-2"></td>
+    </tr>
+    <tr>
+     <td style = "border: 2px solid black">Jose</td>
+     <td style = "border: 2px solid black" id="candidate-3"></td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <input type="text" id="candidate" />
+ <a href="#" onclick="App.voteForCandidate()" class="btn btn-primary">Vote</a>
+ <p id = "msg"> </p> 
+ <p id = "number"> </p> 
+</body>
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="./index.js"></script>
+</html>
